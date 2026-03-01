@@ -1,0 +1,36 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Environment
+.env
+
+# OS
+.DS_Store
+
+# Data & DB
+data/
+*.db
+/tmp/
+
+# Binary / large files (use HF Datasets or Git LFS instead)
+*.pdf
+*.docx
+*.xlsx
+*.zip
+*.tar.gz
+
+# Logs (keep folder, ignore files)
+logs/*.json
+
+# Streamlit secrets (never commit real secrets)
+.streamlit/secrets.toml
+
+# IDE
+.cursor/
+.vscode/

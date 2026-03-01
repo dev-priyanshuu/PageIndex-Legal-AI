@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legal-agentic-pageindex-rag"
+version = "1.0.0"
+description = "Production-grade agentic legal reasoning system with PageIndex tree retrieval."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.115.0",
+  "uvicorn>=0.30.0",
+  "pydantic>=2.8.0",
+  "scikit-learn>=1.5.0",
+  "python-multipart>=0.0.9",
+  "pymupdf>=1.24.0",
+  "python-dotenv",
+  "google-genai",
+  "streamlit>=1.40.0",
+  "requests>=2.31.0",
+  "pyyaml",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agents*", "core*", "knowledge*", "pipeline*", "api*", "infra*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml"]
+
+# Tells Poetry (used by Streamlit Cloud) not to treat this as an installable package
+[tool.poetry]
+package-mode = false

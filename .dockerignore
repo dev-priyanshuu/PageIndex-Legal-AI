@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# .dockerignore — keeps the build context lean and secrets out of the image
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Git ───────────────────────────────────────────────────────────────────────
+.git
+.gitignore
+.gitattributes
+
+# ── Python cache / compiled files ─────────────────────────────────────────────
+__pycache__
+**/__pycache__
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+.venv
+venv
+env
+ENV
+
+# ── Secrets & environment files ───────────────────────────────────────────────
+.streamlit/secrets.toml
+secrets.toml
+
+# ── Local data / uploads / runtime state ─────────────────────────────────────
+data/
+logs/
+uploads/
+tmp/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Test artefacts ────────────────────────────────────────────────────────────
+tests/
+.pytest_cache
+.coverage
+htmlcov/
+coverage.xml
+
+# ── Documentation extras ─────────────────────────────────────────────────────
+docs/
+*.md
+!README.md
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+.idea
+.vscode
+*.swp
+*.swo
+Thumbs.db
+
+# ── Build / packaging artefacts ──────────────────────────────────────────────
+dist/
+build/
+*.egg-info
+*.egg
+.eggs/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints
+*.ipynb
+
+# ── Docker itself ────────────────────────────────────────────────────────────
+Dockerfile
+.dockerignore
